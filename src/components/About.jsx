@@ -204,7 +204,7 @@ const About = () => {
             <span className="flex h-1.5 w-1.5 rounded-full bg-blue-500 mt-1.5 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
             <p className="text-xs text-slate-400 leading-relaxed">
               <strong className="text-slate-200 block mb-0.5 font-['Orbitron'] text-[9px] uppercase tracking-wider">Office Area:</strong> 
-              Thane, Mumbai, Maharashtra, India // Active Node
+            Mumbai, Maharashtra, India // Active Node
             </p>
           </div>
           <div className="flex items-start space-x-3 bg-slate-900/10 p-3 rounded-xl border border-slate-900/60">

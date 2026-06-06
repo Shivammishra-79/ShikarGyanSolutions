@@ -9,7 +9,6 @@ const Contact = () => {
   
   const [formData, setFormData] = useState({
     name: '',
-    mobile: '',
     email: '',
     message: ''
   });
@@ -48,11 +47,11 @@ const Contact = () => {
     .then((result) => {
         setLoading(false);
         setShowPopup(true); // Email send hote hi popup screen par aayega
-        setFormData({ name: '', mobile: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '' });
     }, (error) => {
         alert("Transmission failed. Please check your network or try again.");
         console.log(error.text);
-        loading(false);
+        setLoading(false);
     });
   };
 
@@ -60,7 +59,7 @@ const Contact = () => {
     <section id="contact" className="bg-slate-950 text-white pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden font-['Plus_Jakarta_Sans'] min-h-screen flex items-center justify-center">
       
       {/* Background Deep Tech Glows */}
-      <div className="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-blue-600/10 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-blue-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-indigo-600/10 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-2xl w-full mx-auto relative z-10 flex flex-col gap-6 sm:gap-8">
@@ -90,20 +89,6 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Enter your name"
-                className="w-full bg-slate-950 border border-slate-800 focus:border-blue-500/60 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-slate-200 outline-none transition-all duration-300"
-              />
-            </div>
-
-            {/* Mobile Input */}
-            <div>
-              <label className="block text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wider mb-1.5 sm:mb-2 font-['Orbitron']">Mobile Number</label>
-              <input 
-                type="tel" 
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleChange}
-                required
-                placeholder="Enter your mobile number"
                 className="w-full bg-slate-950 border border-slate-800 focus:border-blue-500/60 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-slate-200 outline-none transition-all duration-300"
               />
             </div>
@@ -153,7 +138,7 @@ const Contact = () => {
           <h4 className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest font-['Orbitron']">
             Follow Our Official Handles
           </h4>
-          <div className="flex items-center justify-center space-x-4">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             
             {/* Instagram Official Agency Link */}
             <a 
@@ -167,7 +152,7 @@ const Contact = () => {
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
-              <span className="hidden xs:inline">Instagram</span>
+              <span>Instagram</span>
             </a>
 
             {/* LinkedIn Official Company Link */}
@@ -182,7 +167,21 @@ const Contact = () => {
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
-              <span className="hidden xs:inline">LinkedIn</span>
+              <span>LinkedIn</span>
+            </a>
+
+            {/* Direct Agency Gmail Link with Svg Logo */}
+            <a 
+              href="mailto:shikargyansolutions@gmail.com" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center space-x-2 bg-slate-950 border border-slate-800/80 px-4 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-red-500 hover:border-red-500/30 hover:bg-red-500/5 transition-all duration-300 font-['Orbitron'] tracking-wider"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Gmail</span>
             </a>
 
           </div>
