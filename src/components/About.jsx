@@ -124,20 +124,6 @@ const About = () => {
               </div>
             </div>
 
-            {/* Arun Tiwari - [FIXED UNCLOSED DIV ERROR HERE] */}
-            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-300 flex flex-col justify-between">
-              <div className="flex items-center space-x-3">
-                <span className="flex h-2 w-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.7)]"></span>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold tracking-wide text-white font-['Orbitron'] group-hover:text-indigo-400 transition-colors">
-                    Arun Tiwari
-                  </h4>
-                  <p className="text-[9px] sm:text-[10px] font-semibold text-slate-400 mt-0.5 tracking-wider uppercase">
-                    B.Tech Graduate
-                  </p>
-                </div>
-              </div>
-            </div>
 
             {/* Gyanchand */}
             <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between sm:col-span-2 md:col-span-1">
