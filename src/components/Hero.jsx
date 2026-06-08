@@ -6,7 +6,6 @@ import bannerImg from '../assets/banner.png';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen bg-slate-950 text-white pt-24 sm:pt-28 pb-20 px-4 sm:px-6 font-['Plus_Jakarta_Sans']">
-      
       {/* ================= 1. VIDEO BACKGROUND ================= */}
       <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 overflow-hidden">
         <div className="absolute inset-0 bg-slate-950/85 z-10 backdrop-blur-[2px]"></div>
@@ -24,6 +23,7 @@ const Hero = () => {
           />
         </video>
       </div>
+      
 
       {/* Background Glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none z-10"></div>
@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="inline-flex items-center space-x-2 bg-slate-900/80 border border-slate-800 px-4 py-1.5 rounded-full mb-6 shadow-md backdrop-blur-md">
             <span className="flex h-1.5 w-1.5 rounded-full bg-blue-400"></span>
             <span className="text-[9px] sm:text-xs font-bold text-slate-400 tracking-widest uppercase font-['Orbitron']">
-              Modern Software Development Agency
+              DIGITAL SYSTEMS DEPLOYMENT
             </span>
           </div>
 
