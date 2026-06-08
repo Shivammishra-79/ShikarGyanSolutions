@@ -2,6 +2,11 @@ import React from 'react';
 import myLogo from '../assets/logo.png'; // Organization logo
 import bannerImg from '../assets/banner.png'; // 1408*768 Banner image
 
+// Team Profile Images
+import shivamImg from '../assets/shivam.png';
+import karanImg from '../assets/karan.png';
+import gyanchandImg from '../assets/gyanchand.png';
+
 const About = () => {
   return (
     <section id="about" className="bg-slate-950 text-white pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden font-['Plus_Jakarta_Sans'] min-h-screen flex items-center justify-center">
@@ -82,7 +87,7 @@ const About = () => {
 
         </div>
 
-        {/* ================= 4. THE MINDS SECTION (FIXED NESTED CARDS) ================= */}
+        {/* ================= 4. THE MINDS SECTION (UPDATED WITH IMAGES AND BUTTONS) ================= */}
         <div className="space-y-4 sm:space-y-6 mt-2">
           <div className="flex items-center space-x-3 sm:space-x-4">
             <div className="h-[1px] bg-slate-900 flex-grow"></div>
@@ -94,10 +99,13 @@ const About = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             
-            {/* Shivam Mishra */}
-            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col justify-between">
-              <div className="flex items-center space-x-3">
-                <span className="flex h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.7)]"></span>
+            {/* Shivam Mishra Card */}
+            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-blue-500/30 transition-all duration-300 flex flex-col justify-between gap-4">
+              <div className="flex items-center space-x-4">
+                {/* Avatar Image Setup */}
+                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-blue-500/30 bg-slate-800 flex-shrink-0">
+                  <img src={shivamImg} alt="Shivam Mishra" className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold tracking-wide text-white font-['Orbitron'] group-hover:text-blue-400 transition-colors">
                     Shivam Mishra
@@ -107,12 +115,35 @@ const About = () => {
                   </p>
                 </div>
               </div>
+              
+              {/* Action Link Icons Block */}
+              <div className="flex items-center gap-2 border-t border-slate-900/80 pt-3">
+                <button className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-white hover:border-slate-700 transition-colors" title="View Profile">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/sammishr" target="_blank" rel="noreferrer" className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-500/20 transition-colors" title="LinkedIn">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://shivam-portfolio-inky.vercel.app" target="_blank" rel="noreferrer" className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-emerald-400 hover:border-emerald-500/20 transition-colors" title="Website">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.657-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.657-9 3-9m-9 9h18" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            {/* Karan Singh */}
-            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-300 flex flex-col justify-between">
-              <div className="flex items-center space-x-3">
-                <span className="flex h-2 w-2 rounded-full bg-indigo-500 shadow-[0_0_8px_rgba(99,102,241,0.7)]"></span>
+            {/* Karan Singh Card */}
+            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-indigo-500/30 transition-all duration-300 flex flex-col justify-between gap-4">
+              <div className="flex items-center space-x-4">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-indigo-500/30 bg-slate-800 flex-shrink-0">
+                  <img src={karanImg} alt="Karan Singh" className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold tracking-wide text-white font-['Orbitron'] group-hover:text-indigo-400 transition-colors">
                     Karan Singh
@@ -122,13 +153,34 @@ const About = () => {
                   </p>
                 </div>
               </div>
+              
+              <div className="flex items-center gap-2 border-t border-slate-900/80 pt-3">
+                <button className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-white hover:border-slate-700 transition-colors" title="View Profile">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/011karansingh" target="_blank" rel="noreferrer" className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-500/20 transition-colors" title="LinkedIn">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/011karansingh" target="_blank" rel="noreferrer" className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-emerald-400 hover:border-emerald-500/20 transition-colors" title="Website">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.657-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.657-9 3-9m-9 9h18" />
+                  </svg>
+                </a>
+              </div>
             </div>
 
-
-            {/* Gyanchand */}
-            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between sm:col-span-2 md:col-span-1">
-              <div className="flex items-center space-x-3">
-                <span className="flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.7)]"></span>
+            {/* Gyanchand Card */}
+            <div className="bg-slate-900/40 border border-slate-900 rounded-xl p-4 sm:p-5 backdrop-blur-sm relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-between gap-4 sm:col-span-2 md:col-span-1">
+              <div className="flex items-center space-x-4">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-emerald-500/30 bg-slate-800 flex-shrink-0">
+                  <img src={gyanchandImg} alt="Gyanchand" className="w-full h-full object-cover" />
+                </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold tracking-wide text-white font-['Orbitron'] group-hover:text-emerald-400 transition-colors">
                     Gyanchand
@@ -137,6 +189,26 @@ const About = () => {
                     MCA Graduate
                   </p>
                 </div>
+              </div>
+              
+              <div className="flex items-center gap-2 border-t border-slate-900/80 pt-3">
+                <button className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-white hover:border-slate-700 transition-colors" title="View Profile">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </button>
+                <a href="https://www.linkedin.com/in/gyanchandyadav" target="_blank" rel="noreferrer" className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-blue-400 hover:border-blue-500/20 transition-colors" title="LinkedIn">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/gyanchandyadav" target="_blank" rel="noreferrer" className="p-2 bg-slate-900/80 border border-slate-800 rounded-lg text-slate-400 hover:text-emerald-400 hover:border-emerald-500/20 transition-colors" title="Website">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.657-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.657-9 3-9m-9 9h18" />
+                  </svg>
+                </a>
               </div>
             </div>
 
