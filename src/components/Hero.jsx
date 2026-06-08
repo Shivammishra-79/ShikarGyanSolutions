@@ -159,8 +159,8 @@ const Hero = () => {
               },
               {
                 quote: "We hired ShikarGyan to build a cross-platform web management application for our services tracking. The site layout is fully responsive on mobiles and tablets, and the custom tracking tools save our team hours of work every single week.",
-                name: "Enterprise Client",
-                title: "Services Industry Leader",
+                name: "Adv. Umesh Suryawanshi",
+                title: "Legal Consultant & Corporate Advocate",
                 color: "text-indigo-400"
               }
             ].map((review, index) => (
